@@ -5,6 +5,7 @@ class StringAnalyzer
     end
 end
 
+
 describe StringAnalyzer do
     context " validate has_vowels function" do 
 
@@ -17,6 +18,11 @@ describe StringAnalyzer do
          it " should detect when a string has at least one vowels" do
             h1 = StringAnalyzer.new()
             expect(h1.has_vowels?("new")).to be true
+    
+         end
+         it " should detect when a string empty" do
+            h1 = StringAnalyzer.new()
+            expect(h1.has_vowels?("")).to be false
     
          end
 
@@ -53,7 +59,7 @@ describe StringAnalyzer do
             expect(h1.has_vowels?("BCDFG")).to be false
     
          end
-         it " should detect when a string empty" do
+         it " should detect when a string has white space" do
             h1 = StringAnalyzer.new()
             expect(h1.has_vowels?(" ")).to be false
     
